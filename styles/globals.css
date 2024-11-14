@@ -152,4 +152,47 @@ header a, .logout-button {
 .logout-button {
   background-color: #FF6347;
 }
+header {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+header a, .logout-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.logout-button {
+  background-color: #FF6347;
+}
+
+section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #ff6347;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 
