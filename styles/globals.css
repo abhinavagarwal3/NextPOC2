@@ -1,16 +1,155 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+/* Reset some basic styling */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Style for buttons */
+button.signup-button,
+button.login-button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 5px;
+}
+
+button.logout-button {
+  background-color: #FF6347;
+  color: white;
+}
+
+button.like-button {
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button.like-button.liked {
+  background-color: #ff69b4; /* Color changes to pink when liked */
+}
+
+li {
+  background-color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* globals.css */
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+header a, .logout-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.logout-button {
+  background-color: #FF6347;
+}
+

@@ -1,4 +1,3 @@
-// components/LoginButton.js
 import { useState } from 'react';
 import supabase from '../utils/supabaseClient';
 
@@ -17,7 +16,7 @@ export default function LoginButton({ setUser }) {
       alert("Login failed!");
     } else {
       console.log("Logged in as:", data.user);
-      setUser(data.user);  // Update the user state in the parent component
+      setUser(data.user);
       alert("Login successful!");
     }
   };
@@ -36,7 +35,7 @@ export default function LoginButton({ setUser }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Log In</button>
+      <button className="login-button" onClick={handleLogin}>Log In</button>
     </div>
   );
 }

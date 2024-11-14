@@ -1,10 +1,9 @@
-// components/SignUpButton.js
-import { useState } from "react";
-import supabase from "../utils/supabaseClient";
+import { useState } from 'react';
+import supabase from '../utils/supabaseClient';
 
 export default function SignUpButton() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSignUp = async () => {
     const { error } = await supabase.auth.signUp({
@@ -34,7 +33,7 @@ export default function SignUpButton() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button className="signup-button" onClick={handleSignUp}>Sign Up</button>
     </div>
   );
 }
