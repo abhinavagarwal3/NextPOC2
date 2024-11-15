@@ -3,9 +3,9 @@ import LogoutButton from './LogoutButton';
 
 export default function Header({ user, setUser }) {
   return (
-    <header className="header">
+    <header className="netflix-header">
       <div className="header-content">
-        <h1 className="logo">Property Club</h1>
+        <h1 className="logo">Property Finder</h1>
         <nav className="nav">
           <Link href="/" className="nav-link">Home</Link>
           {user ? (

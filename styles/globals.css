@@ -164,3 +164,267 @@ body {
   background-color: #d32f2f;
 }
 
+/* General Netflix Theme */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #141414;
+  color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+.netflix-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+header .logo {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #e50914;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.carousel-section {
+  margin-bottom: 40px;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 250px;
+  border-radius: 8px;
+  background-color: #222;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
+}
+
+.carousel-item-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.carousel-item-price {
+  color: #4caf50;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #141414;
+  color: #e5e5e5;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* General Netflix Theme with Modern Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #141414;
+  color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem; /* Logo and prominent titles */
+}
+
+h2 {
+  font-size: 1.8rem; /* Section titles */
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem; /* Card titles */
+}
+
+p, a {
+  font-size: 1rem; /* General text */
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a {
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e50914;
+}
+
+
+
+
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+}
+
+/* Carousel */
+.carousel-section {
+  margin-bottom: 40px;
+}
+
+.carousel-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 250px;
+  border-radius: 8px;
+  background-color: #222;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
+}
+
+.carousel-item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.carousel-item-price {
+  color: #4caf50;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #141414;
+  color: #e5e5e5;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Header */
+header.netflix-header {
+  background-color: #141414;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Space out logo and nav */
+  align-items: center; /* Align items vertically */
+  max-width: 1200px; /* Limit width for large screens */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+/* Add space between logo and navigation */
+.logo {
+  color: #e50914;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 50px; /* Increased spacing */
+}
+
+.nav {
+  display: flex;
+  gap: 30px; /* Increased spacing between navigation links */
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #e50914;
+}
+
+
+

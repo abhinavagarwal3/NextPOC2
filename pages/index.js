@@ -56,11 +56,11 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
+    <div className="netflix-container">
       <Header user={user} setUser={setUser} />
-      <main className="main">
+      <main className="main-content">
         {user && recommendedProperties.length > 0 && (
-          <Recommendations recommendedProperties={recommendedProperties} user={user} />
+          <Recommendations recommendedProperties={recommendedProperties} />
         )}
         <Properties properties={properties} user={user} />
       </main>

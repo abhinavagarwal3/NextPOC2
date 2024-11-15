@@ -1,17 +1,17 @@
 export default function Recommendations({ recommendedProperties }) {
   return (
-    <section className="section">
-      <h2 className="section-title">Recommended for You</h2>
-      <div className="scroll-container">
+    <section className="carousel-section">
+      <h2 className="carousel-title">Recommended for You</h2>
+      <div className="carousel">
         {recommendedProperties.map((property) => (
-          <div key={property.id} className="card">
+          <div key={property.id} className="carousel-item">
             <img
               src={property.imageUrl}
               alt={property.title}
-              className="card-image"
+              className="carousel-image"
             />
-            <h3 className="card-title">{property.title}</h3>
-            <p className="card-price">${property.price}</p>
+            <h3 className="carousel-item-title">{property.title}</h3>
+            <p className="carousel-item-price">${property.price}</p>
           </div>
         ))}
       </div>
