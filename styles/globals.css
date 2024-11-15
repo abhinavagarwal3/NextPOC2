@@ -136,10 +136,12 @@ body {
 }
 
 /* Like Button */
+/* Like Button */
 .like-button {
   background-color: #4caf50;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .like-button:hover {
@@ -151,3 +153,14 @@ body {
   background-color: #2e7d32;
   transform: scale(0.95);
 }
+
+/* Liked State */
+.like-button.liked {
+  background-color: #34aaf4;
+  color: white;
+}
+
+.like-button.liked:hover {
+  background-color: #d32f2f;
+}
+

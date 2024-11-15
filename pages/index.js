@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import supabase from '../utils/supabaseClient';
-import Link from 'next/link';
-import LogoutButton from '../components/LogoutButton';
-import LikeButton from '../components/LikeButton';
+import Header from '../components/Header';
+import Recommendations from '../components/Recommendations';
+import Properties from '../components/Properties';
+import Footer from '../components/Footer';
 import { toast } from 'react-toastify';
 
 export default function Home() {
@@ -56,69 +57,14 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Header Section */}
-      <header className="header">
-        <div className="header-content">
-          <h1 className="logo">Property Club</h1>
-          <nav className="nav">
-            <Link href="/" className="nav-link">Home</Link>
-            {user ? (
-              <>
-                <Link href="/properties" className="nav-link">Properties</Link>
-                <LogoutButton setUser={setUser} />
-              </>
-            ) : (
-              <Link href="/auth/signin" className="nav-link">Sign In</Link>
-            )}
-          </nav>
-        </div>
-      </header>
-
+      <Header user={user} setUser={setUser} />
       <main className="main">
-        {/* Recommendations Section */}
         {user && recommendedProperties.length > 0 && (
-          <section className="section">
-            <h2 className="section-title">Recommended for You</h2>
-            <div className="scroll-container">
-              {recommendedProperties.map((property) => (
-                <div key={property.id} className="card">
-                  <img
-                    src={property.imageUrl}
-                    alt={property.title}
-                    className="card-image"
-                  />
-                  <h3 className="card-title">{property.title}</h3>
-                  <p className="card-price">${property.price}</p>
-                  <LikeButton propertyId={property.id} userId={user.id} />
-                </div>
-              ))}
-            </div>
-          </section>
+          <Recommendations recommendedProperties={recommendedProperties} user={user} />
         )}
-
-        {/* All Properties Section */}
-        <section className="section">
-          <h2 className="section-title">All Properties</h2>
-          <div className="scroll-container">
-            {properties.map((property) => (
-              <div key={property.id} className="card">
-                <img
-                  src={property.imageUrl}
-                  alt={property.title}
-                  className="card-image"
-                />
-                <h3 className="card-title">{property.title}</h3>
-                <p className="card-price">${property.price}</p>
-                {user && <LikeButton propertyId={property.id} userId={user.id} />}
-              </div>
-            ))}
-          </div>
-        </section>
+        <Properties properties={properties} user={user} />
       </main>
-
-      <footer className="footer">
-        <p>&copy; 2024 Property Club. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
