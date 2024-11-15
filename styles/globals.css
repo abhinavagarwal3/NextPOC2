@@ -1,198 +1,153 @@
-/* Reset some basic styling */
-* {
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f9f9f9;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  color: #333;
-}
-
-button {
-  cursor: pointer;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-input {
-  padding: 8px;
-  margin: 5px;
-  font-size: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background-color: white;
+/* Header */
+.header {
+  background-color: #4caf50;
+  color: white;
   padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-h2 {
-  color: #333;
-}
-
-p {
-  color: #666;
-  margin: 5px 0;
-}
-
-/* Style for buttons */
-button.signup-button,
-button.login-button {
-  background-color: #4CAF50;
-  color: white;
-  margin: 5px;
-}
-
-button.logout-button {
-  background-color: #FF6347;
-  color: white;
-}
-
-button.like-button {
-  background-color: #007bff;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-button.like-button.liked {
-  background-color: #ff69b4; /* Color changes to pink when liked */
-}
-
-li {
-  background-color: white;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* globals.css */
-
-button {
-  cursor: pointer;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-input {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-input:focus {
-  outline: none;
-  border-color: #4CAF50;
-}
-
-header {
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-header h1 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-header a, .logout-button {
-  text-decoration: none;
-  padding: 10px 20px;
-  color: white;
-  background-color: #4CAF50;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.logout-button {
-  background-color: #FF6347;
-}
-header {
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  color: #333;
+.logo {
+  font-size: 1.8rem;
   margin: 0;
 }
 
-header a, .logout-button {
-  text-decoration: none;
-  padding: 10px 20px;
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
   color: white;
-  background-color: #4CAF50;
-  border-radius: 5px;
+  text-decoration: none;
   font-size: 1rem;
 }
 
-.logout-button {
-  background-color: #FF6347;
+/* Main */
+.main {
+  margin-top: 20px;
 }
 
-section {
+/* Sections */
+.section {
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-section h2 {
-  color: #ff6347;
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Scrollable Container */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
 }
 
+/* Cards */
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/* Footer */
+.footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+/* General Button Styles */
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Like Button */
+.like-button {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.like-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.like-button:active {
+  background-color: #2e7d32;
+  transform: scale(0.95);
+}

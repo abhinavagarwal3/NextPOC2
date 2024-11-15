@@ -1,4 +1,5 @@
 import supabase from '../utils/supabaseClient';
+import { toast } from 'react-toastify';
 
 export default function LogoutButton({ setUser }) {
   const handleLogout = async () => {
@@ -8,9 +9,10 @@ export default function LogoutButton({ setUser }) {
       console.error("Logout error:", error.message);
     } else {
       setUser(null);
-      alert("Logged out successfully!");
+      toast.success('Logged out successfully!');
+      
     }
   };
 
-  return <button className="logout-button" onClick={handleLogout}>Log Out</button>;
+  return <button className="button logout-button" onClick={handleLogout}>Log Out</button>;
 }

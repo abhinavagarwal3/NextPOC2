@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import supabase from '../utils/supabaseClient';
+import { toast } from 'react-toastify';
 
 export default function LoginButton({ setUser }) {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ export default function LoginButton({ setUser }) {
     } else {
       console.log("Logged in as:", data.user);
       setUser(data.user);
-      alert("Login successful!");
+      toast.success('Login successful!');
     }
   };
 

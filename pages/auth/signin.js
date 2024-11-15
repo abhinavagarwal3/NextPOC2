@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import supabase from '../../utils/supabaseClient';
+import { toast } from 'react-toastify';
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
@@ -32,9 +33,9 @@ export default function SignInPage() {
 
     if (error) {
       console.error("Login error:", error.message);
-      alert("Login failed!");
+      toast.failure('Login failed!');
     } else {
-      alert("Login successful!");
+      toast.success('Login successful!');
       router.push('/');  // Redirect to home page after successful login
     }
   };

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import supabase from '../utils/supabaseClient';
+import { toast } from 'react-toastify';
 
 export default function SignUpButton() {
   const [email, setEmail] = useState('');
