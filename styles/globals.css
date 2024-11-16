@@ -426,5 +426,73 @@ header.netflix-header {
   color: #e50914;
 }
 
+.chat-container {
+  background-color: #141414;
+  color: white;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+.chat-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.chat-message.user {
+  background-color: #4caf50;
+  color: white;
+  text-align: right;
+}
+
+.chat-message.ai {
+  background-color: #444;
+  color: white;
+  text-align: left;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-input button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
