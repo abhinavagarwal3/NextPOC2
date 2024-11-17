@@ -32,7 +32,7 @@ export default function Home() {
       try {
         const response = await axios.get('/api/properties');
         setProperties(response.data);
-        toast.success("Properties loaded successfully!");
+        //toast.success("Properties loaded successfully!");
       } catch (error) {
         console.error("Error fetching properties:", error);
         toast.error("Failed to fetch properties.");
@@ -49,7 +49,7 @@ export default function Home() {
         user_id: userId,
       });
       setRecommendedProperties(response.data.recommended_properties || []);
-      toast.success("Recommendations loaded successfully!");
+      //toast.success("Recommendations loaded successfully!");
     } catch (error) {
       console.error("Error fetching recommendations:", error);
       toast.error("Failed to load recommendations.");

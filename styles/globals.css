@@ -46,14 +46,11 @@
 
 /* Logout Button */
 .logout-button {
-  background-color: #f44336;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ff3b30; /* Red for Logout */
 }
 
 .logout-button:hover {
-  background-color: #d32f2f;
-  transform: scale(1.05);
+  background-color: #e02e24; /* Darker red on hover */
 }
 
 .like-icon {
@@ -90,17 +87,20 @@
   z-index: 999;
 }
 
+
 .chat-button {
+  margin-left: auto; 
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #e50914;
+  background-color: #6c63ff; 
   color: white;
   cursor: pointer;
 }
 
+
 .chat-button:hover {
-  background-color: #c40712;
+  background-color: #574ddc;
 }
 
 /* Chat Overlay */
@@ -245,43 +245,7 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.logo {
-  font-size: 1.5rem;
-  color: #007aff;
-}
-
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #333;
-}
-
-.nav-button {
-  padding: 10px 15px;
-  background-color: #007aff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.nav-button:hover {
-  background-color: #005bb5;
-}
 
 /* Hero Section */
 .hero {
@@ -342,37 +306,61 @@ h1, h2, h3 {
 }
 
 /* Header Styles */
-.header-content {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px; /* Adjusted padding for better spacing */
+  padding: 15px 50px; /* Add more padding for wider spacing */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  background-color: white;
-  z-index: 1000;
+  z-index: 1000; /* Keeps the header on top during scrolling */
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
+/* Navigation Links */
 .nav {
   display: flex;
-  gap: 30px; /* Increased spacing between menu items */
+  align-items: center;
+  gap: 30px; /* Add spacing between navigation items */
 }
 
-.nav-link,
-.nav-button {
+
+.nav-link {
   font-size: 1rem;
   color: #333;
   text-decoration: none;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: #007aff; /* Hover effect for links */
+}
+
+/* Buttons */
+.nav-button {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded buttons */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 20px;
+}
+
 .nav-button:hover {
-  color: #007aff;
-  background-color: #f0f0f0; /* Subtle hover effect */
-  border-radius: 5px;
+  background-color: #005bb5;
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Recommendations Section */
@@ -471,3 +459,49 @@ h1, h2, h3 {
 .hero {
   background-color: #ffffff;
 }
+
+.spacer {
+  flex: 1;
+}
+
+
+.logout-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem; /* Icon size */
+  color: #ff3b30; /* Red color for logout */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.logout-icon-button:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  color: #e02e24; /* Darker red on hover */
+}
+
+.logout-icon {
+  font-size: 1.8rem;
+}
+
+/* AI Assistant Icon Button */
+
+
+.chat-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c63ff; /* Purple color for AI icon */
+  font-size: 1.8rem; /* Adjust icon size */
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-right: 20px; /* Spacing between AI Assistant and Logout */
+}
+
+.chat-icon-button:hover {
+  color: #574ddc; /* Darker purple on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.chat-icon {
+  font-size: 2rem; /* Icon size */
+}
+

@@ -1,21 +1,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import ChatAssistant from "./ChatAssistant";
+import LogoutButton from "./LogoutButton";
+import { FaRobot } from "react-icons/fa"; // Import robot icon
 
 export default function Header({ user, setUser }) {
   const [showChat, setShowChat] = useState(false);
 
   const openChat = () => setShowChat(true);
   const closeChat = () => setShowChat(false);
-
-  const handleLogout = async () => {
-    try {
-      await supabase.auth.signOut();
-      setUser(null);
-    } catch (error) {
-      console.error("Error logging out:", error);
-    }
-  };
 
   return (
     <header className="header">
@@ -25,29 +18,36 @@ export default function Header({ user, setUser }) {
           <Link href="/" className="nav-link">
             Home
           </Link>
-          {user && (
-            <>
-              <Link href="/properties" className="nav-link">
-                Properties
-              </Link>
-              <button className="nav-button" onClick={handleLogout}>
-                Logout
-              </button>
-            </>
-          )}
-          {!user && (
-            <Link href="/auth/signin" className="nav-link">
-              Sign In
-            </Link>
-          )}
+
+          <Link href="/properties" className="nav-link">
+            Properties
+          </Link>
+
           {/* Add the Open AI Assistant Button */}
-          <button className="nav-button" onClick={openChat}>
-            Open AI Assistant
+          <button
+            className="chat-icon-button"
+            onClick={openChat}
+            aria-label="Open AI Assistant"
+            title="Open AI Assistant"
+          >
+            <FaRobot className="chat-icon" />
           </button>
         </nav>
       </div>
       {/* Chat Assistant Overlay */}
       {showChat && <ChatAssistant onClose={closeChat} />}
+
+      {/* Logout Button */}
+      {user && (
+        <>
+          <LogoutButton setUser={setUser} />
+        </>
+      )}
+      {!user && (
+        <Link href="/auth/signin" className="nav-link">
+          Sign In
+        </Link>
+      )}
     </header>
   );
 }
