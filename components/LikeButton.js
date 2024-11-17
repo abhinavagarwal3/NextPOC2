@@ -1,31 +1,36 @@
 import { useState } from 'react';
-import axios from 'axios';
-import { toast } from 'react-toastify';
+import { FaHeart, FaRegHeart } from 'react-icons/fa'; // Import heart icons
 
 export default function LikeButton({ propertyId, userId }) {
   const [liked, setLiked] = useState(false);
 
-  const handleLike = async () => {
+  const toggleLike = async () => {
+    setLiked(!liked);
+
+    // Simulate API call to save like status
     try {
-      await axios.post('/api/interactions', {
-        user_id: userId,
-        property_id: propertyId,
-        interaction_type: liked ? "unlike" : "like", // Toggle like/unlike
+      await fetch('/api/interactions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          user_id: userId,
+          property_id: propertyId,
+          interaction_type: liked ? 'unlike' : 'like',
+        }),
       });
-      setLiked(!liked);
-      toast.success(liked ? "Property unliked!" : "Property liked!");
     } catch (error) {
-      console.error("Error liking property:", error);
-      toast.error("Failed to update like status.");
+      console.error('Error updating like status:', error);
+      setLiked(!liked); // Revert if there's an error
     }
   };
 
   return (
-    <button
-      className={`button like-button ${liked ? "liked" : ""}`}
-      onClick={handleLike}
-    >
-      {liked ? "Liked" : "Like"}
-    </button>
+    <div onClick={toggleLike} className="like-icon">
+      {liked ? (
+        <FaHeart className="liked" /> // Filled heart for liked
+      ) : (
+        <FaRegHeart className="not-liked" /> // Outlined heart for not liked
+      )}
+    </div>
   );
 }

@@ -56,33 +56,22 @@
   transform: scale(1.05);
 }
 
-/* Like Button */
-/* Like Button */
-.like-button {
-  background-color: #4caf50;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+.like-icon {
+  font-size: 1.5rem; /* Adjust size */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.like-button:hover {
-  background-color: #388e3c;
-  transform: scale(1.05);
+.like-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
-.like-button:active {
-  background-color: #2e7d32;
-  transform: scale(0.95);
+.liked {
+  color: #ff3b30; /* Red color for liked */
 }
 
-/* Liked State */
-.like-button.liked {
-  background-color: #34aaf4;
-  color: white;
-}
-
-.like-button.liked:hover {
-  background-color: #d32f2f;
+.not-liked {
+  color: #aaa; /* Gray color for not liked */
 }
 
 
