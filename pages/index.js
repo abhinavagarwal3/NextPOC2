@@ -5,8 +5,8 @@ import Header from '../components/Header';
 import Recommendations from '../components/Recommendations';
 import Properties from '../components/Properties';
 import Footer from '../components/Footer';
-import ChatAssistant from "../components/ChatAssistant";
 import { toast } from 'react-toastify';
+import HeroSection from '../components/HeroSection';
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -57,16 +57,15 @@ export default function Home() {
   };
 
   return (
-    <div className="netflix-container">
+    <div className="app-container">
       <Header user={user} setUser={setUser} />
-      <main className="main-content">
+      
+        <HeroSection />
         {user && recommendedProperties.length > 0 && (
           <Recommendations recommendedProperties={recommendedProperties} />
         )}
         <Properties properties={properties} user={user} />
-        {/* Add Chat Assistant */}
-        <ChatAssistant />
-      </main>
+   
       <Footer />
     </div>
   );

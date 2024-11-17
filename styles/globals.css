@@ -1,51 +1,8 @@
-/* Global Styles */
-body {
-  font-family: "Arial", sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-/* Header */
-.header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.nav {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
 
 /* Main */
 .main {
@@ -71,45 +28,9 @@ body {
   padding-bottom: 10px;
 }
 
-/* Cards */
-.card {
-  flex: 0 0 auto;
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: white;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
 
-.card-title {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
 
-.card-price {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #4caf50;
-}
-
-/* Footer */
-.footer {
-  background-color: #4caf50;
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
 /* General Button Styles */
 .button {
   padding: 10px 20px;
@@ -164,327 +85,24 @@ body {
   background-color: #d32f2f;
 }
 
-/* General Netflix Theme */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #141414;
-  color: #e5e5e5;
-  margin: 0;
-  padding: 0;
-}
-
-.netflix-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 
-
-header .logo {
-  color: #e50914;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.nav {
+/* Top Menu */
+.top-menu {
   display: flex;
-  gap: 20px;
-}
-
-.nav-link {
-  color: #e5e5e5;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.nav-link:hover {
-  color: #e50914;
-}
-
-.main-content {
-  padding: 20px;
-}
-
-.carousel-section {
-  margin-bottom: 40px;
-}
-
-.carousel-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
-  scrollbar-width: none; /* For Firefox */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  width: 250px;
-  border-radius: 8px;
-  background-color: #222;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-
-.carousel-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-bottom: 1px solid #444;
-}
-
-.carousel-item-title {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-
-.carousel-item-price {
-  color: #4caf50;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-footer {
+  justify-content: space-between;
+  align-items: center;
   background-color: #141414;
-  color: #e5e5e5;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-/* General Netflix Theme with Modern Typography */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #141414;
-  color: #e5e5e5;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-  margin: 0;
-}
-
-h1 {
-  font-size: 2.5rem; /* Logo and prominent titles */
-}
-
-h2 {
-  font-size: 1.8rem; /* Section titles */
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-size: 1.2rem; /* Card titles */
-}
-
-p, a {
-  font-size: 1rem; /* General text */
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-a {
-  color: #e5e5e5;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #e50914;
-}
-
-
-
-
-
-/* Main Content */
-.main-content {
-  padding: 20px;
-}
-
-/* Carousel */
-.carousel-section {
-  margin-bottom: 40px;
-}
-
-.carousel-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
-  scrollbar-width: none; /* Firefox */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  width: 250px;
-  border-radius: 8px;
-  background-color: #222;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-
-.carousel-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-bottom: 1px solid #444;
-}
-
-.carousel-item-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
-.carousel-item-price {
-  color: #4caf50;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #141414;
-  color: #e5e5e5;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
-
-/* Header */
-header.netflix-header {
-  background-color: #141414;
-  padding: 20px;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between; /* Space out logo and nav */
-  align-items: center; /* Align items vertically */
-  max-width: 1200px; /* Limit width for large screens */
-  margin: 0 auto; /* Center content horizontally */
-}
-
-/* Add space between logo and navigation */
-.logo {
-  color: #e50914;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-right: 50px; /* Increased spacing */
-}
-
-.nav {
-  display: flex;
-  gap: 30px; /* Increased spacing between navigation links */
-}
-
-.nav-link {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #e5e5e5;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: #e50914;
-}
-
-.chat-container {
-  background-color: #141414;
-  color: white;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.chat-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.chat-messages {
-  max-height: 300px;
-  overflow-y: auto;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #222;
-  border-radius: 5px;
-}
-
-.chat-message {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.chat-message.user {
-  background-color: #4caf50;
-  color: white;
-  text-align: right;
-}
-
-.chat-message.ai {
-  background-color: #444;
-  color: white;
-  text-align: left;
-}
-
-.chat-input {
-  display: flex;
-  gap: 10px;
-}
-
-.chat-input input {
-  flex-grow: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: white;
-}
-
-.chat-input button {
-  padding: 10px 20px;
+.chat-button {
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   background-color: #e50914;
@@ -492,7 +110,375 @@ header.netflix-header {
   cursor: pointer;
 }
 
+.chat-button:hover {
+  background-color: #c40712;
+}
+
+/* Chat Overlay */
+.chat-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  max-height: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chat Header */
+.chat-header {
+  background: #007aff;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-close:hover {
+  color: #ff3b30;
+}
+
+/* Chat Messages Section */
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  align-self: flex-end;
+  background: #007aff;
+  color: white;
+  border-radius: 15px 15px 0 15px;
+  padding: 10px 15px;
+}
+
+.ai {
+  align-self: flex-start;
+  background: #e9e9eb;
+  color: #333;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px 15px;
+}
+
+/* Input Bar */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.chat-input input::placeholder {
+  color: #aaa;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #005bb5;
+}
+
 .chat-input button:disabled {
-  background-color: #555;
+  background: #bbb;
   cursor: not-allowed;
+}
+
+
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #007aff;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-button {
+  padding: 10px 15px;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #005bb5;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #ffffff, #f0f0f0);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+}
+
+.hero-subtitle {
+  color: #666;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #005bb5;
+}
+
+/* Properties and Recommendations */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card-price {
+  color: #007aff;
+}
+
+/* Header Styles */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px; /* Adjusted padding for better spacing */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+
+.nav {
+  display: flex;
+  gap: 30px; /* Increased spacing between menu items */
+}
+
+.nav-link,
+.nav-button {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-button:hover {
+  color: #007aff;
+  background-color: #f0f0f0; /* Subtle hover effect */
+  border-radius: 5px;
+}
+
+/* Recommendations Section */
+.carousel-section {
+  padding: 40px 20px; /* Consistent spacing around the section */
+  background-color: #f9f9f9; /* Light background for separation */
+}
+
+.carousel-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px; /* Add spacing between recommendation cards */
+  justify-content: center; /* Center-align recommendations */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.carousel-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Consistent card size */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel-item-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.carousel-item-price {
+  color: #007aff;
+  font-size: 1rem;
+}
+
+/* Section Separation */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #ffffff, #f0f0f0);
+  border-bottom: 1px solid #ddd; /* Subtle separation */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.hero .cta-button {
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  background-color: #005bb5;
+}
+
+
+.carousel-section {
+  background-color: #f9f9f9;
+}
+
+.hero {
+  background-color: #ffffff;
 }
